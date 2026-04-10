@@ -5,7 +5,7 @@ def ajouter_etudiants(nom,note):
     etudiants.append({"nom":nom,"note":note})
     print(f"Etudiants {nom}ajouté avec la note {note}.")
     
-def calculer_moyenne():
+def calculer_moyenne(): 
     if not etudiants:
     print("Aucun étudiant enrégistré.")
     return 0
@@ -13,3 +13,10 @@ def calculer_moyenne():
    moyenne=total/|en(etudiants)
    print(f"Moyenne de le classe:{moyenne:.2f}")
    return moyenne
+
+def afficher_notes():
+    if not etudiants:
+    print("Aucun étudiants.")
+    return
+    for e in etudiants:
+        print(f"-{e['nom']}:{e['note']}/20")
